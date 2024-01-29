@@ -1,4 +1,4 @@
-const octokit = require('@octokit/rest');
+import { Octokit } from "@octokit/rest";
 
 module.exports = async function (payload) {
     // Obtén el ID del PR
@@ -6,9 +6,11 @@ module.exports = async function (payload) {
 
     // Obtén el nombre de la rama del PR
     const branchName = payload.pull_request.head.ref;
+    console.log("PR Id: ", prId);
+    console.log("Branch: ", branchName);
 
     // Borra la rama
-    await octokit.repos.deleteBranch({
+    await Octokit.repos.deleteBranch({
         repo: payload.repository.full_name,
         branch_name: branchName,
     });
