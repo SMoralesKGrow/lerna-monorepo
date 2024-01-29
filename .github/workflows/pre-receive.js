@@ -1,4 +1,4 @@
-const github = require('github');
+const octokit = require('@octokit/rest');
 
 module.exports = async function (payload) {
     // Obtén el ID del PR
@@ -8,7 +8,7 @@ module.exports = async function (payload) {
     const branchName = payload.pull_request.head.ref;
 
     // Borra la rama
-    await github.repos.deleteBranch({
+    await octokit.repos.deleteBranch({
         repo: payload.repository.full_name,
         branch_name: branchName,
     });
