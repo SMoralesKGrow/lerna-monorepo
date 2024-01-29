@@ -1,0 +1,17 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  github:
+    specifier: ^14.0.0
+    version: 14.0.0
+
+packages:
+
+  /github@14.0.0:
+    resolution: {integrity: sha512-34/VqwhYGeYN0VHBSH49TmRWMF7emy32qjK6POiW47T/QI2u/cpuKsmrWt7a218ew/73dF4dQSJE68/HXdNfPw==}
+    deprecated: '''github'' has been renamed to ''@octokit/rest'' (https://git.io/vNB11)'
+    dev: false
