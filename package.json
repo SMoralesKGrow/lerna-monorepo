@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "github": "^14.0.0"
+    "@octokit/rest": "^20.0.2"
   }
 }
